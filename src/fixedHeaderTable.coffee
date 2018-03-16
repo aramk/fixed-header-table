@@ -14,8 +14,8 @@ $.fn.fixedTableHeader = (args) ->
     $headerTable = $('.ui.table', $header)
   else
     $container = $('<div class="table-fixed-container"></div>')
-  $body = $('<div class="body"></div>') unless hasElement($body)
-  $header = $('<div class="header"></div>') unless hasElement($header)
+  $body = $('<div class="table-fixed-container-body"></div>') unless hasElement($body)
+  $header = $('<div class="table-fixed-container-header"></div>') unless hasElement($header)
   $headerTable = $('<table class="ui table unstackable"></table>') unless hasElement($headerTable)
   
   unless exists
@@ -41,7 +41,7 @@ $.fn.fixedTableHeader = (args) ->
 
   # Set the width of the original header to that of the cloned header so they align.
   setWidths = ->
-    $headerTable.width($table.width())
+    $headerTable.width($table[0].scrollWidth)
     $headerCells = $('th', $theadClone)
     $('th', $thead).each (i) ->
       $th = $(@)
