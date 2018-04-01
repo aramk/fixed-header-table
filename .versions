@@ -2,7 +2,7 @@ aramk:fixed-header-table@0.1.0
 babel-compiler@6.6.4
 babel-runtime@0.1.7
 caching-compiler@1.0.3
-coffeescript@1.0.16
+coffeescript@2.2.1_1
 ecmascript@0.4.2
 ecmascript-runtime@0.2.9
 jquery@1.11.7
