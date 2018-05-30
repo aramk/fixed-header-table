@@ -9,8 +9,8 @@ $.fn.fixedTableHeader = (args) ->
   # handlers to break.
   $container = $table.closest('.table-fixed-container')
   if hasElement($container)
-    $header = $('.header', $container)
-    $body = $('.body', $container)
+    $header = $('.table-fixed-container-header', $container)
+    $body = $('.table-fixed-container-body', $container)
     $headerTable = $('.ui.table', $header)
   else
     $container = $('<div class="table-fixed-container"></div>')
